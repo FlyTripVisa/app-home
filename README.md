@@ -105,5 +105,26 @@ npx wrangler versions deploy
 This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
 ---
+##Project structure
+├── app/                  # মূল সোর্স কোড ফোল্ডার
+│   ├── routes/           # অ্যাপ্লিকেশনের সব রাউট (এখানেই এডিট করতে হবে)
+│   │   └── home.tsx      # ডিফল্ট হোম পেজ
+│   ├── welcome/          # ওয়েলকাম কম্পোনেন্ট ও এসেটস
+│   │   ├── logo-dark.svg
+│   │   ├── logo-light.svg
+│   │   └── welcome.tsx
+│   ├── app.css           # গ্লোবাল স্টাইলশিট
+│   ├── entry.server.tsx  # সার্ভার সাইড রেন্ডারিং এন্ট্রি পয়েন্ট
+│   ├── root.tsx          # মেইন লেআউট ফাইল
+│   └── routes.ts         # রাউট কনফিগারেশন
+├── public/               # স্ট্যাটিক ফাইল (favicon.ico)
+├── workers/              # Cloudflare Workers এর কাস্টম লজিক
+│   └── app.ts
+├── package.json          # ডিপেন্ডেন্সি ও স্ক্রিপ্টস
+├── react-router.config.ts # React Router এর বিল্ড কনফিগারেশন
+├── vite.config.ts        # Vite কনফিগারেশন
+├── wrangler.json         # Cloudflare Deployment কনফিগারেশন
+└── tsconfig*.json        # টাইপস্ক্রিপ্ট কনফিগারেশন
+
 
 Built with ❤️ using React Router.
